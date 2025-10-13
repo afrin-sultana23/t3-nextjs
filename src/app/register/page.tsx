@@ -16,7 +16,7 @@ const Page = () => {
                     <FormItem>
                         <FormLabel>Username</FormLabel>
                         <FormControl>
-                            <Input placeholder="" {...field} />
+                            <Input placeholder="place your input" {...field} />
                         </FormControl>
                         <FormDescription>This is your public display name.</FormDescription>
                         <FormMessage />

@@ -1,9 +1,28 @@
 import React from 'react';
+import {useForm} from "react-hook-form";
+import {FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "~/components/ui/form";
+import {Input} from "~/components/ui/input";
 
 const Page = () => {
+    const form = useForm()
     return (
         <div>
-            <h1>hello this is login page</h1>
+            <h1>this is a LOGIN page</h1>
+
+            <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                    <FormItem>
+                        <FormLabel>Username</FormLabel>
+                        <FormControl>
+                            <Input placeholder="place your email" {...field} />
+                        </FormControl>
+                        <FormDescription>This is your public display name.</FormDescription>
+                        <FormMessage />
+                    </FormItem>
+                )}
+            />
         </div>
     );
 };
