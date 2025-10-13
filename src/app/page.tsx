@@ -5,8 +5,11 @@ import {Navbar} from "~/components/ui/Navbar";
 export default function HomePage() {
   return (
     <main className="">
-        <a href="http://"></a>
-          <Navbar/>
+        <div className="text-cyan-600 flex justify-between">
+            <Navbar/>
+            <a href="login"></a>
+
+        </div>
         <div className="container ">
         <h1 className="text-center text-5xl font-medium text-cyan-600">Hello There
 
