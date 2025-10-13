@@ -7,10 +7,13 @@ export default function HomePage() {
     <main className="">
         <a href="http://"></a>
           <Navbar/>
+        <div className="container ">
         <h1 className="text-center text-5xl font-medium text-cyan-600">Hello There
-            
+
         </h1>
-     
+        </div>
+
+
     </main>
   );
 }
