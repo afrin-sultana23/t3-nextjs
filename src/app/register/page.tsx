@@ -14,6 +14,11 @@ const Page = () => {
                     message: "Username must be at least 2 characters.",
                 }),
             })
+    function onSubmit(values: z.infer<typeof formSchema>) {
+        // Do something with the form values.
+        // ✅ This will be type-safe and validated.
+        console.log(values)
+    }
     return (
         <div>
             <h1>this is a register page</h1>

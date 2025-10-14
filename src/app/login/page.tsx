@@ -2,9 +2,16 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 import {FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "~/components/ui/form";
 import {Input} from "~/components/ui/input";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
 
 const Page = () => {
-    const form = useForm()
+    const form = useForm(
+    )
+
+    const formSchema = z.object({
+
+    })
     return (
         <div>
             <h1>this is a LOGIN page</h1>
