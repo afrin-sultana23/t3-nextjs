@@ -1,24 +1,29 @@
 import React from 'react';
-import {useForm} from "react-hook-form";
+import {useForm, SubmitHandler } from "react-hook-form";
 import {FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "~/components/ui/form";
 import {Input} from "~/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 
 const Page = () => {
-            const form = useForm(
-            )
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            username: "",
+        },
+    })
+    const onSubmit: SubmitHandler<FormSchema> = (data) => console.log(data)
 
             const formSchema = z.object({
                 username: z.string().min(2, {
                     message: "Username must be at least 2 characters.",
                 }),
             })
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
-    }
+    // function onSubmit(values: z.infer<typeof formSchema>) {
+    //     // Do something with the form values.
+    //     // ✅ This will be type-safe and validated.
+    //     console.log(values)
+    // }
     return (
         <div>
             <h1>this is a register page</h1>
