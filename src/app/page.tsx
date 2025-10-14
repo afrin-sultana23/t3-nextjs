@@ -7,7 +7,7 @@ export default function HomePage() {
     <main className="">
         <div className="text-cyan-600 flex justify-between">
             <Navbar/>
-            <a href="login"></a>
+            <a href="/login"></a>
 
         </div>
         <div className="container ">
