@@ -20,11 +20,6 @@ const Page = () => {
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
-    // function onSubmit(values: z.infer<typeof formSchema>) {
-    //     // Do something with the form values.
-    //     // ✅ This will be type-safe and validated.
-    //     console.log(values)
-    // }
     return (
         <div>
             <h1>this is a register page</h1>
@@ -40,20 +35,7 @@ const Page = () => {
                 <input type="submit" />
             </form>
 
-            {/*<FormField*/}
-            {/*    control={form.control}*/}
-            {/*    name="username"*/}
-            {/*    render={({ field }) => (*/}
-            {/*        <FormItem>*/}
-            {/*            <FormLabel>Username</FormLabel>*/}
-            {/*            <FormControl>*/}
-            {/*                <Input placeholder="place your input" {...field} />*/}
-            {/*            </FormControl>*/}
-            {/*            <FormDescription>This is your public display name.</FormDescription>*/}
-            {/*            <FormMessage />*/}
-            {/*        </FormItem>*/}
-            {/*    )}*/}
-            {/*/>*/}
+
         </div>
     );
 };
