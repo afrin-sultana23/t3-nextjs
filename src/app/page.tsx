@@ -5,7 +5,7 @@ import {Navbar} from "~/components/ui/Navbar";
 export default function HomePage() {
   return (
     <main className="">
-        <div className="text-cyan-600 flex justify-between">
+        <div className=" justify-between">
             <Navbar/>
             <a href="/login"></a>
 

@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import {
     Card,
@@ -28,13 +29,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "~/components/ui/select"
-import { Calendar } from "~/components/ui/calendar"
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "~/components/ui/popover"
-import { CalendarIcon } from "lucide-react"
+import { Eye, EyeOff } from "lucide-react"
 import { format } from "date-fns"
 import { cn } from "~/lib/utils"
 
@@ -73,6 +68,9 @@ const registerSchema = z.object({
 type RegisterFormValues = z.infer<typeof registerSchema>
 
 const Page = () => {
+    const [showPassword, setShowPassword] = useState(false)
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+
     const form = useForm<RegisterFormValues>({
         resolver: zodResolver(registerSchema),
         defaultValues: {
@@ -86,9 +84,13 @@ const Page = () => {
     })
 
     const onSubmit = (data: RegisterFormValues) => {
-        console.log("Form submitted:", data)
+        // Format the date to only include year-month-day (no time)
+        const formattedData = {
+            ...data,
+            birthdate: format(data.birthdate, "yyyy-MM-dd")
+        }
+        console.log("Form submitted:", formattedData)
         // TODO: Add your registration logic here (API call, etc.)
-        // For now, we're just logging the data
     }
 
     const handleGoogleRegister = () => {
@@ -98,6 +100,7 @@ const Page = () => {
 
     return (
         <div className="flex min-h-screen items-center justify-center p-4">
+
             <Card className="w-full max-w-md">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">Create an Account</CardTitle>
@@ -146,7 +149,27 @@ const Page = () => {
                                     <FormItem>
                                         <FormLabel>Password</FormLabel>
                                         <FormControl>
-                                            <Input type="password" placeholder="••••••••" {...field} />
+                                            <div className="relative">
+                                                <Input
+                                                    type={showPassword ? "text" : "password"}
+                                                    placeholder="••••••••"
+                                                    {...field}
+                                                    className="pr-10"
+                                                />
+                                                <Button
+                                                    type="button"
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                                                    onClick={() => setShowPassword(!showPassword)}
+                                                >
+                                                    {showPassword ? (
+                                                        <EyeOff className="h-4 w-4 text-muted-foreground" />
+                                                    ) : (
+                                                        <Eye className="h-4 w-4 text-muted-foreground" />
+                                                    )}
+                                                </Button>
+                                            </div>
                                         </FormControl>
                                         <FormDescription>
                                             Must be at least 8 characters with uppercase, lowercase, and number
@@ -164,7 +187,27 @@ const Page = () => {
                                     <FormItem>
                                         <FormLabel>Confirm Password</FormLabel>
                                         <FormControl>
-                                            <Input type="password" placeholder="••••••••" {...field} />
+                                            <div className="relative">
+                                                <Input
+                                                    type={showConfirmPassword ? "text" : "password"}
+                                                    placeholder="••••••••"
+                                                    {...field}
+                                                    className="pr-10"
+                                                />
+                                                <Button
+                                                    type="button"
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+                                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                                >
+                                                    {showConfirmPassword ? (
+                                                        <EyeOff className="h-4 w-4 text-muted-foreground" />
+                                                    ) : (
+                                                        <Eye className="h-4 w-4 text-muted-foreground" />
+                                                    )}
+                                                </Button>
+                                            </div>
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -202,45 +245,29 @@ const Page = () => {
                                 control={form.control}
                                 name="birthdate"
                                 render={({ field }) => (
-                                    <FormItem className="flex flex-col">
+                                    <FormItem>
                                         <FormLabel>Date of Birth</FormLabel>
-                                        <Popover>
-                                            <PopoverTrigger asChild>
-                                                <FormControl>
-                                                    <Button
-                                                        variant="outline"
-                                                        className={cn(
-                                                            "w-full pl-3 text-left font-normal",
-                                                            !field.value && "text-muted-foreground"
-                                                        )}
-                                                    >
-                                                        {field.value ? (
-                                                            format(field.value, "PPP")
-                                                        ) : (
-                                                            <span>Pick a date</span>
-                                                        )}
-                                                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                                                    </Button>
-                                                </FormControl>
-                                            </PopoverTrigger>
-                                            <PopoverContent className="w-auto p-0" align="start">
-                                                <Calendar
-                                                    mode="single"
-                                                    selected={field.value}
-                                                    onSelect={field.onChange}
-                                                    disabled={(date) =>
-                                                        date > new Date() || date < new Date("1900-01-01")
+                                        <FormControl>
+                                            <Input
+                                                type="date"
+                                                value={field.value ? format(field.value, "yyyy-MM-dd") : ""}
+                                                onChange={(e) => {
+                                                    if (e.target.value) {
+                                                        // Create date at noon UTC to avoid timezone issues
+                                                        const parts = e.target.value.split('-')
+                                                        const year = parseInt(parts[0]!, 10)
+                                                        const month = parseInt(parts[1]!, 10)
+                                                        const day = parseInt(parts[2]!, 10)
+                                                        const date = new Date(Date.UTC(year, month - 1, day))
+                                                        field.onChange(date)
+                                                    } else {
+                                                        field.onChange(undefined)
                                                     }
-                                                    initialFocus
-                                                    captionLayout="dropdown-buttons"
-                                                    fromYear={1900}
-                                                    toYear={new Date().getFullYear()}
-                                                />
-                                            </PopoverContent>
-                                        </Popover>
-                                        <FormDescription>
-                                            You can also type the date manually in the input above
-                                        </FormDescription>
+                                                }}
+                                                max={format(new Date(), "yyyy-MM-dd")}
+                                                min="1900-01-01"
+                                            />
+                                        </FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -257,9 +284,9 @@ const Page = () => {
                                     <span className="w-full border-t" />
                                 </div>
                                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
-                    Or continue with
-                  </span>
+                                  <span className="bg-background px-2 text-muted-foreground">
+                                    Or continue with
+                                  </span>
                                 </div>
                             </div>
 
@@ -296,7 +323,7 @@ const Page = () => {
                     <p className="mt-4 text-center text-sm text-muted-foreground">
                         Already have an account?{" "}
                         <a href="/login" className="underline underline-offset-4 hover:text-primary">
-                            Sign in
+                            Log in
                         </a>
                     </p>
                 </CardContent>
