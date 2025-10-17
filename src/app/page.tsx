@@ -1,6 +1,5 @@
-import Link from "next/link";
-import {NavigationMenu} from "~/components/ui/navigation-menu";
-import {Navbar} from "~/components/ui/Navbar";
+import Link from "next/link";;
+import {Navbar} from "~/components/Home/Navbar";
 
 export default function HomePage() {
   return (

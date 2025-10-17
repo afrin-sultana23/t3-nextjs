@@ -54,7 +54,13 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
     return (
-        <NavigationMenu className="mx-auto  p-3 " viewport={false}>
+        <NavigationMenu className="mx-auto max-w-4/5 p-3 flex justify-between" viewport={false}>
+            <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <Link href="/login">Login</Link>
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+
             <NavigationMenuList className="flex justify-between">
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Home</NavigationMenuTrigger>
@@ -64,7 +70,7 @@ export function Navbar() {
                                 <NavigationMenuLink asChild>
                                     <a
                                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                                        href="/"
+                                        href="/t3-nextjs/public"
                                     >
                                         <div className="mt-4 mb-2 text-lg font-medium">
                                             Discount Deal 60% upto
@@ -103,16 +109,7 @@ export function Navbar() {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/login">Login</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/register">Register</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
+
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>List</NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -191,7 +188,17 @@ export function Navbar() {
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+
             </NavigationMenuList>
+            <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <Link href="/login">Login</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                    <Link href="/register">Register</Link>
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+
         </NavigationMenu>
     )
 }
