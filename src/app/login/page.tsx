@@ -126,7 +126,7 @@ const Page = () => {
                             {/* Forgot Password Link */}
                             <div className="flex justify-end">
                                 <a
-                                    href="/forgot-password"
+                                    href=""
                                     className="text-sm text-primary hover:underline"
                                 >
                                     Forgot password?
