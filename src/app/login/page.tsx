@@ -79,7 +79,7 @@ const Page = () => {
                                         <FormControl>
                                             <Input
                                                 type="email"
-                                                placeholder="john@example.com"
+
                                                 {...field}
                                             />
                                         </FormControl>
@@ -99,7 +99,7 @@ const Page = () => {
                                             <div className="relative">
                                                 <Input
                                                     type={showPassword ? "text" : "password"}
-                                                    placeholder="••••••••"
+
                                                     {...field}
                                                     className="pr-10"
                                                 />
