@@ -6,7 +6,8 @@ const Hero = () => {
         <div>
             <AuthBackgroundShape/>
             <div>
-                WELCOME to E SHOP
+               <p>WELCOME to E SHOP</p>
+                <img className=""  alt=""/>
             </div>
         </div>
     );
