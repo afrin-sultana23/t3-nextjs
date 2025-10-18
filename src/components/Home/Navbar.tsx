@@ -55,11 +55,9 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
     return (
         <NavigationMenu className="mx-auto max-w-4/5 p-3 flex justify-between" viewport={false}>
-            <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="/login">Login</Link>
-                </NavigationMenuLink>
-            </NavigationMenuItem>
+
+            <a href="/logo">Logo</a>
+
 
             <NavigationMenuList className="flex justify-between">
                 <NavigationMenuItem>
@@ -190,14 +188,11 @@ export function Navbar() {
                 </NavigationMenuItem>
 
             </NavigationMenuList>
-            <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <div className="flex items-center gap-2">
+
                     <Link href="/login">Login</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="/register">Register</Link>
-                </NavigationMenuLink>
-            </NavigationMenuItem>
+
+            </div>
 
         </NavigationMenu>
     )
