@@ -1,9 +1,10 @@
 import Link from "next/link";;
 import {Navbar} from "~/components/Home/Navbar";
+import Footer from "~/components/Home/footer";
 
 export default function HomePage() {
   return (
-    <main className="">
+    <div className="">
         <div className=" justify-between">
             <Navbar/>
             <a href="/login"></a>
@@ -15,7 +16,7 @@ export default function HomePage() {
         </h1>
         </div>
 
-
-    </main>
+        <Footer/>
+    </div>
   );
 }
