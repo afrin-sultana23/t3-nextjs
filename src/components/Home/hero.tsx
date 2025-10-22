@@ -5,9 +5,15 @@ const hero = () => {
     return (
         <div>
             <div>
-               <p>WELCOME to E SHOP</p>
                 <div>
-                    <img alt={""}/>
+                    <p>WELCOME to E SHOP</p>
+                    <div>
+                        <button className="">Search</button>
+                        <button className="button_next">Get started</button>
+                    </div>
+                </div>
+                <div>
+                    <img className="" alt={""}/>
                 </div>
             </div>
         </div>
