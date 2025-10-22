@@ -1,6 +1,8 @@
-import Link from "next/link";;
+"use client"
 import {Navbar} from "~/components/Home/Navbar";
 import Footer from "~/components/Home/footer";
+import Hero from "~/components/Home/hero";
+
 
 export default function HomePage() {
   return (
@@ -15,7 +17,7 @@ export default function HomePage() {
 
         </h1>
         </div>
-
+        <Hero/>
         <Footer/>
     </div>
   );
