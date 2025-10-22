@@ -6,7 +6,9 @@ const hero = () => {
         <div>
             <div>
                <p>WELCOME to E SHOP</p>
-
+                <div>
+                    <img alt={""}/>
+                </div>
             </div>
         </div>
     );

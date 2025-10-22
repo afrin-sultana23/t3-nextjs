@@ -10,13 +10,10 @@ export default function HomePage() {
         <div className=" justify-between">
             <Navbar/>
             <a href="/login"></a>
-
         </div>
-        <div className="container ">
-        <h1 className="text-center text-5xl font-medium text-cyan-600">Hello There
-
-        </h1>
-        </div>
+            <div className="container ">
+                {/*<h1 className="text-center text-5xl font-medium text-cyan-600">Hello There</h1>*/}
+            </div>
         <Hero/>
         <Footer/>
     </div>
