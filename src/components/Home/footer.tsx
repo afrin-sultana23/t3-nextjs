@@ -129,14 +129,12 @@ const Footer = () => {
                                 Subscribe
                             </button>
                         </div>
-                        <p className="text-xs mt-3 text-gray-400">
-                            We respect your privacy. Unsubscribe at any time.
-                        </p>
+
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-gray-800 mt-4 pt-3">
+                <div className="border-t border-gray-800 mt-5 pt-3">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
                         <p className="text-sm">
                             © {currentYear} E Shop. All rights reserved.
