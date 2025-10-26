@@ -16,7 +16,7 @@ const Item = () => {
         <div>
             <Card>
                 <CardHeader>
-                    <CardTitle>Card Title</CardTitle>
+                    <CardTitle>Card Title: {items.map(item => <p>item.id</p>)}</CardTitle>
                     <CardDescription>Card Description</CardDescription>
                     <CardAction>Card Action</CardAction>
                 </CardHeader>
