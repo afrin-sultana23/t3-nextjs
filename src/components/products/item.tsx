@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardAction, CardDescription, CardHeader, CardTitle} from "~/components/ui/card";
+import {Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle} from "~/components/ui/card";
 import {Alert} from "~/components/ui/alert";
 import {BadgeAlert} from "lucide-react";
 
@@ -8,16 +8,16 @@ const Item = () => {
         <div>
             <Card>
                 <CardHeader>
-                    <Alert>
-                        <BadgeAlert/>
-                    </Alert>
-                    <CardTitle>
-                        <img alt=""/>
-                    </CardTitle>
-                    <CardDescription>Shoes</CardDescription>
-                    <CardAction></CardAction>
-
+                    <CardTitle>Card Title</CardTitle>
+                    <CardDescription>Card Description</CardDescription>
+                    <CardAction>Card Action</CardAction>
                 </CardHeader>
+                <CardContent>
+                    <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                    <p>Card Footer</p>
+                </CardFooter>
             </Card>
         </div>
     );
