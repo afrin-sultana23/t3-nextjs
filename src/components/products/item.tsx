@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "~/components/ui/card";
-import {Alert} from "~/components/ui/alert";
-import {BadgeAlert} from "lucide-react";
+
 
 const Item = () => {
 
@@ -9,7 +8,14 @@ const Item = () => {
         {
         'id' : 1,
         'name' : "Beef",
-
+        },
+        {
+            'id' : 2,
+            'name' : "Chicken",
+        },
+        {
+            'id' : 3,
+            'name' : "meat",
         },
     ]
     return (
@@ -17,7 +23,8 @@ const Item = () => {
             <Card>
                 <CardHeader>
                     <CardTitle>Card Title: {items.map(item => <p>item.id</p>)}</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
+                    <CardDescription>Toys
+                    </CardDescription>
                     <CardAction>Card Action</CardAction>
                 </CardHeader>
                 <CardContent>
