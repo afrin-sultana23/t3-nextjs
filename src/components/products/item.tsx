@@ -23,13 +23,14 @@ const Item = () => {
             <Card>
                 <CardHeader>
                     <CardTitle>Card Title: {items.map(item => <p>item.id</p>)}</CardTitle>
-                    <CardDescription>Toys
+                    <CardDescription>Food section
                     </CardDescription>
-                    <CardAction>Card Action</CardAction>
+                    <CardAction>Add to cart</CardAction>
                 </CardHeader>
                 <CardContent>
-                    <p>Card Content</p>
+                    <p>Price:$</p>
                 </CardContent>
+                <div><p>-------------</p></div>
                 <CardFooter>
                     <p>Card Footer</p>
                 </CardFooter>
