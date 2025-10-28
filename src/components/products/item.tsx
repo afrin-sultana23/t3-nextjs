@@ -19,22 +19,17 @@ const Item = () => {
         },
     ]
     return (
-        <div>
-            <Card>
-                <CardHeader>
-                    <CardTitle>Card Title: {items.map(item => <p>item.id</p>)}</CardTitle>
-                    <CardDescription>Food section
-                    </CardDescription>
-                    <CardAction>Add to cart</CardAction>
-                </CardHeader>
-                <CardContent>
-                    <p>Price:$</p>
-                </CardContent>
-                <div><p>-------------</p></div>
-                <CardFooter>
-                    <p>Card Footer</p>
-                </CardFooter>
-            </Card>
+        <div className="container mx-auto px-4 py-8">
+            <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {sampleProducts.map((product) => (
+                    <ProductCard
+                        key={product.id}
+                        product={product}
+                        onAddToCart={handleAddToCart}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
