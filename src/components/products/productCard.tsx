@@ -90,10 +90,9 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
             {/* Product Image */}
             <Link href={`/product/${product.id}`}>
                 <div className="relative aspect-square overflow-hidden bg-gray-100">
-                    <Image
-                        src={product.image}
+                    <img src={product.image}
                         alt={product.name}
-                        fill
+
                         className="object-cover transition-transform group-hover:scale-110"
                     />
 
@@ -157,7 +156,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
                 </div>
             </CardContent>
 
-            <CardFooter className="p-4 pt-0">
+            <CardFooter className="">
                 <Button
                     onClick={handleAddToCart}
                     disabled={!product.inStock || isAdding}
