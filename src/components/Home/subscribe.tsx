@@ -1,61 +1,95 @@
-import React, {useState} from 'react';
+"use client"
+
+import { useState } from "react"
+import { Send } from "lucide-react"
+import { Button } from "~/components/ui/button"
+import { Input } from "~/components/ui/input"
 
 const Subscribe = () => {
+    const [email, setEmail] = useState("")
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
-    const [email, setEmail] = useState('');
-    const [status, setStatus] = useState('');
-    const handleSubmit = () => {
-        e.preventDefault();
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        setStatus("loading")
+
+            // TODO: Replace with your actual API endpoint
+            // const response = await fetch("/api/subscribe", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({ email }),
+            // })
+
     }
 
     return (
-        <div className="my-16 ">
-            <div className="flex mx-auto container p-14 bg-purple-200 h-[22rem] rounded-lg max-w-4xl">
-                <div className=' h-1/2'>
-                    <h1 className="heading mt-5">Subscribe to our Newsletter</h1>
-                    <p className="text-gray-500 text-lg font-medium ml-20 pb-4">Take your career to unique heights!!</p>
+        <section className="my-14 px-4">
+            <div className="mx-auto container max-w-5xl">
+                <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-purple-100 rounded-2xl px-10 py-5 shadow-lg">
+                    <div className="flex flex-col md:flex-row items-center gap-5">
+                        {/* Left Content */}
+                        <div className="flex-1 w-full">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                                Subscribe to Our Newsletter
+                            </h2>
+                            <p className="text-gray-600 text-lg mb-6">
+                                Get exclusive deals, new arrivals, and special offers delivered to your inbox!
+                            </p>
 
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                <div className="flex flex-col sm:flex-row gap-3">
+                                    <Input
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Enter your email address"
+                                        required
+                                        disabled={status === "loading"}
+                                        className="flex-1 h-12 text-base"
+                                    />
+                                    <Button
+                                        type="submit"
+                                        disabled={status === "loading"}
+                                        className="h-12 px-8 gap-2 whitespace-nowrap"
+                                    >
+                                        {status === "loading" ? (
+                                            "..."
+                                        ) : (
+                                            <>
+                                                <Send className="w-5 h-5" />
+                                            </>
+                                        )}
+                                    </Button>
+                                </div>
 
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                        <div className="flex">
-                            <label className="relative flex-1">
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className="input input-bordered w-full rounded-r-none"
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                            </label>
-                            <button
-                                type="submit"
-                                className="btn bg-[#C298F6] border-none tracking-wider rounded-l-none hover:bg-[#b17ee9]">
-                                <FaTelegramPlane className="w-5 h-5" />
+                                {status === "success" && (
+                                    <p className="text-green-600 text-sm font-medium flex items-center gap-2">
+                                        <span className="inline-block w-2 h-2 bg-green-600 rounded-full"></span>
+                                        Successfully subscribed! Check your email for confirmation.
+                                    </p>
+                                )}
+                                {status === "error" && (
+                                    <p className="text-red-600 text-sm font-medium flex items-center gap-2">
+                                        <span className="inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+                                        Something went wrong. Please try again.
+                                    </p>
+                                )}
+                            </form>
 
-                            </button>
+                            <p className="text-xs text-gray-500 mt-3">
+                                We respect your privacy. Unsubscribe at any time.
+                            </p>
                         </div>
 
-                        {status === 'success' && (
-                            <p className="text-black text-sm">Successfully subscribed!</p>
-                        )}
-                        {status === 'error' && (
-                            <p className="text-red-500 text-sm">Something went wrong. Please try again.</p>
-                        )}
-                    </form>
+                        {/* Right Image/Illustration */}
 
-
-                </div>
-                <div className="w-1/3 mr-10">
-                    {/*<Lottie*/}
-                    {/*    options={defaultOptions}*/}
-                    {/*    height={300}*/}
-                    {/*    width={300}*/}
-                    {/*/>*/}
+                    </div>
                 </div>
             </div>
-        </div>
-    );
-};
+        </section>
+    )
+}
 
-export default Subscribe;
+export default Subscribe
