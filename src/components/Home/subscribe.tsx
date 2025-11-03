@@ -4,6 +4,8 @@ import { useState } from "react"
 import { Send } from "lucide-react"
 import { Button } from "~/components/ui/button"
 import { Input } from "~/components/ui/input"
+import Lottie from "lottie-react";
+import  subscribe from "public/Animation/Subscribe.json"
 
 const Subscribe = () => {
     const [email, setEmail] = useState("")
@@ -27,7 +29,7 @@ const Subscribe = () => {
     return (
         <section className="my-14 px-4">
             <div className="mx-auto container max-w-5xl">
-                <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-purple-100 rounded-2xl px-10 py-5 shadow-lg">
+                <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-purple-300 rounded-2xl px-10 py-3 shadow-lg">
                     <div className="flex flex-col md:flex-row items-center gap-5">
                         {/* Left Content */}
                         <div className="flex-1 w-full">
@@ -85,10 +87,11 @@ const Subscribe = () => {
 
                         {/* Right Image/Illustration */}
                         <Lottie
-                            animationData={null}
-                            path="..public/Animation/"
+                            animationData={subscribe}
                             loop={true}
                             autoplay={true}
+                            style={{ width: 400, height: 400 }}
+
                         />
                     </div>
                 </div>
