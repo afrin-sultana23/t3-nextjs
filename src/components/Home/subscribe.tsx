@@ -84,7 +84,12 @@ const Subscribe = () => {
                         </div>
 
                         {/* Right Image/Illustration */}
-
+                        <Lottie
+                            animationData={null}
+                            path="..public/Animation/"
+                            loop={true}
+                            autoplay={true}
+                        />
                     </div>
                 </div>
             </div>
