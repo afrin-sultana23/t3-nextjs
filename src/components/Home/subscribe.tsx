@@ -16,13 +16,13 @@ const Subscribe = () => {
         setStatus("loading")
 
             // TODO: Replace with your actual API endpoint
-            // const response = await fetch("/api/subscribe", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify({ email }),
-            // })
+            const response = await fetch("/subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email }),
+            })
 
     }
 
