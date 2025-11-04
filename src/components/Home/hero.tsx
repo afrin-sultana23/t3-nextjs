@@ -1,7 +1,9 @@
 "use client"
-import React from 'react';
+import React, {useState} from 'react';
 
 const hero = () => {
+
+    const [currentSlide, setCurrentSlide] = useState(0)
 
     const slides: HeroSlide[] = [
         {
@@ -26,7 +28,30 @@ const hero = () => {
             secondaryCTA: "Learn More",
             bgGradient: "from-blue-500/20 to-cyan-500/20"
         },
-]
+        {
+            id: 3,
+            title: "Home & Living",
+            subtitle: "Comfort Redefined",
+            description: "Transform your space with our curated collection of furniture and home decor.",
+            image: "https://images.unsplash.com/photo-1484502249930-e1da807099a5?w=1200&h=800&fit=crop",
+            badge: "TRENDING",
+            primaryCTA: "Shop Home",
+            secondaryCTA: "Browse Categories",
+            bgGradient: "from-orange-500/20 to-yellow-500/20"
+        }
+    ]
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length)
+        }, 5000)
+
+        return () => clearInterval(timer)
+    }, [slides.length])
+
+    const goToSlide = (index: number) => {
+        setCurrentSlide(index)
+    }
 
     return (
         <div>
