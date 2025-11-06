@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const hero = () => {
 
@@ -54,19 +54,19 @@ const hero = () => {
     }
 
     return (
-        <div>
-            <div>
-                <div>
-                    <p>WELCOME to E SHOP</p>
-                    <div>
-                        <button className="">Search</button>
-                        <button className="button_next">Get started</button>
-                    </div>
-                </div>
-                <div>
-                    <img className="" alt={""}/>
-                </div>
-            </div>
+
+            <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                {/* Main Hero Container */}
+                <div className="container mx-auto px-4 py-12 md:py-20">
+                    <div className="relative">
+                        {/* Slides */}
+                        {slides.map((slide, index) => (
+                            <div
+                                key={slide.id}
+                                className={`transition-opacity duration-700 ${
+                                    index === currentSlide ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
+                                }`}
+                            >
         </div>
     );
 };
