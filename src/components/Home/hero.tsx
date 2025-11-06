@@ -88,6 +88,27 @@ const hero = () => {
                                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                                                 {slide.title}
                                             </h1>
+
+                                            {/* Description */}
+                                            <p className="text-lg md:text-xl text-gray-700 max-w-xl">
+                                                {slide.description}
+                                            </p>
+
+                                            {/* CTA Buttons */}
+                                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                                <Link href="/shop">
+                                                    <Button size="lg" className="gap-2 w-full sm:w-auto">
+                                                        <ShoppingBag className="h-5 w-5" />
+                                                        {slide.primaryCTA}
+                                                    </Button>
+                                                </Link>
+                                                <Link href="/categories">
+                                                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
+                                                        {slide.secondaryCTA}
+                                                        <ArrowRight className="h-5 w-5" />
+                                                    </Button>
+                                                </Link>
+                                            </div>
         </div>
     );
 };
