@@ -67,6 +67,27 @@ const hero = () => {
                                     index === currentSlide ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
                                 }`}
                             >
+                                <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-3xl overflow-hidden shadow-2xl`}>
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12 lg:p-16">
+                                        {/* Left Content */}
+                                        <div className="space-y-6 z-10">
+                                            {/* Badge */}
+                                            {slide.badge && (
+                                                <Badge className="bg-white text-primary hover:bg-white/90 text-sm px-4 py-1.5 gap-2">
+                                                    <Sparkles className="h-4 w-4" />
+                                                    {slide.badge}
+                                                </Badge>
+                                            )}
+
+                                            {/* Subtitle */}
+                                            <p className="text-primary font-semibold text-lg uppercase tracking-wide">
+                                                {slide.subtitle}
+                                            </p>
+
+                                            {/* Title */}
+                                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                                                {slide.title}
+                                            </h1>
         </div>
     );
 };
