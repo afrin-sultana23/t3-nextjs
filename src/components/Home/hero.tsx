@@ -29,7 +29,7 @@ const Hero = () => {
             title: "Summer Collection 2024",
             subtitle: "New Arrivals",
             description: "Discover the latest trends in fashion and electronics. Up to 50% off on selected items.",
-            image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop",
+            image: "https://ibb.co.com/SXf82mjT",
             badge: "50% OFF",
             primaryCTA: "Shop Now",
             secondaryCTA: "View Collection",
@@ -40,7 +40,7 @@ const Hero = () => {
             title: "Tech Gadgets",
             subtitle: "Smart Living",
             description: "Upgrade your lifestyle with cutting-edge technology and innovative gadgets.",
-            image: "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1200&h=800&fit=crop",
+            image: "https://ibb.co.com/SXf82mjT",
             badge: "NEW",
             primaryCTA: "Explore Tech",
             secondaryCTA: "Learn More",
@@ -51,7 +51,7 @@ const Hero = () => {
             title: "Home & Living",
             subtitle: "Comfort Redefined",
             description: "Transform your space with our curated collection of furniture and home decor.",
-            image: "https://images.unsplash.com/photo-1484502249930-e1da807099a5?w=1200&h=800&fit=crop",
+            image: "https://ibb.co.com/SXf82mjT.jpg",
             badge: "TRENDING",
             primaryCTA: "Shop Home",
             secondaryCTA: "Browse Categories",
@@ -149,8 +149,7 @@ const Hero = () => {
 
                                     {/* Right Image */}
                                     <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-                                        <Image
-                                            src={slide.image}
+                                        <img src={slide.image}
                                             alt={slide.title}
                                             fill
                                             className="object-cover"
