@@ -1,7 +1,7 @@
 "use client"
 import React, {useEffect, useState} from 'react';
 
-const hero = () => {
+const Hero = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -143,8 +143,29 @@ const hero = () => {
                                 </div>
                             </div>
                         ))}
-        </div>
-    );
-};
 
-export default hero;
+                        {/* Slide Indicators */}
+                        <div className="flex justify-center gap-3 mt-8">
+                            {slides.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => goToSlide(index)}
+                                    className={`transition-all duration-300 rounded-full ${
+                                        index === currentSlide
+                                            ? "bg-primary w-12 h-3"
+                                            : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
+                                    }`}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Decorative Elements */}
+                <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
+            </section>
+    )
+
+export default Hero;
