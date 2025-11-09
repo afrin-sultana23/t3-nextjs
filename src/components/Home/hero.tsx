@@ -1,5 +1,23 @@
 "use client"
-import React, {useEffect, useState} from 'react';
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "~/components/ui/button"
+import { Badge } from "~/components/ui/badge"
+import { ShoppingBag, ArrowRight, Sparkles } from "lucide-react"
+
+
+type HeroSlide = {
+    id: number
+    title: string
+    subtitle: string
+    description: string
+    image: string
+    badge?: string
+    primaryCTA: string
+    secondaryCTA: string
+    bgGradient: string
+}
 
 const Hero = () => {
 
@@ -55,117 +73,120 @@ const Hero = () => {
 
     return (
 
-            <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-                {/* Main Hero Container */}
-                <div className="container mx-auto px-4 py-12 md:py-20">
-                    <div className="relative">
-                        {/* Slides */}
-                        {slides.map((slide, index) => (
+        <section className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+            {/* Main Hero Container */}
+            <div className="container mx-auto px-4 py-12 md:py-20">
+                <div className="relative">
+                    {/* Slides */}
+                    {slides.map((slide, index) => (
+                        <div
+                            key={slide.id}
+                            className={`transition-opacity duration-700 ${
+                                index === currentSlide ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
+                            }`}
+                        >
                             <div
-                                key={slide.id}
-                                className={`transition-opacity duration-700 ${
-                                    index === currentSlide ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
-                                }`}
-                            >
-                                <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-3xl overflow-hidden shadow-2xl`}>
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12 lg:p-16">
-                                        {/* Left Content */}
-                                        <div className="space-y-6 z-10">
-                                            {/* Badge */}
-                                            {slide.badge && (
-                                                <Badge className="bg-white text-primary hover:bg-white/90 text-sm px-4 py-1.5 gap-2">
-                                                    <Sparkles className="h-4 w-4" />
-                                                    {slide.badge}
-                                                </Badge>
-                                            )}
+                                className={`bg-gradient-to-br ${slide.bgGradient} rounded-3xl overflow-hidden shadow-2xl`}>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12 lg:p-16">
+                                    {/* Left Content */}
+                                    <div className="space-y-6 z-10">
+                                        {/* Badge */}
+                                        {slide.badge && (
+                                            <Badge
+                                                className="bg-white text-primary hover:bg-white/90 text-sm px-4 py-1.5 gap-2">
+                                                <Sparkles className="h-4 w-4"/>
+                                                {slide.badge}
+                                            </Badge>
+                                        )}
 
-                                            {/* Subtitle */}
-                                            <p className="text-primary font-semibold text-lg uppercase tracking-wide">
-                                                {slide.subtitle}
-                                            </p>
+                                        {/* Subtitle */}
+                                        <p className="text-primary font-semibold text-lg uppercase tracking-wide">
+                                            {slide.subtitle}
+                                        </p>
 
-                                            {/* Title */}
-                                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                                                {slide.title}
-                                            </h1>
+                                        {/* Title */}
+                                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                                            {slide.title}
+                                        </h1>
 
-                                            {/* Description */}
-                                            <p className="text-lg md:text-xl text-gray-700 max-w-xl">
-                                                {slide.description}
-                                            </p>
+                                        {/* Description */}
+                                        <p className="text-lg md:text-xl text-gray-700 max-w-xl">
+                                            {slide.description}
+                                        </p>
 
-                                            {/* CTA Buttons */}
-                                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                                <Link href="/shop">
-                                                    <Button size="lg" className="gap-2 w-full sm:w-auto">
-                                                        <ShoppingBag className="h-5 w-5" />
-                                                        {slide.primaryCTA}
-                                                    </Button>
-                                                </Link>
-                                                <Link href="/categories">
-                                                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
-                                                        {slide.secondaryCTA}
-                                                        <ArrowRight className="h-5 w-5" />
-                                                    </Button>
-                                                </Link>
-                                            </div>
-
-                                            {/* Stats or Features */}
-                                            <div className="flex gap-8 pt-6">
-                                                <div>
-                                                    <p className="text-3xl font-bold text-gray-900">10K+</p>
-                                                    <p className="text-sm text-gray-600">Happy Customers</p>
-                                                </div>
-                                                <div>
-                                                    <p className="text-3xl font-bold text-gray-900">5K+</p>
-                                                    <p className="text-sm text-gray-600">Products</p>
-                                                </div>
-                                                <div>
-                                                    <p className="text-3xl font-bold text-gray-900">50+</p>
-                                                    <p className="text-sm text-gray-600">Categories</p>
-                                                </div>
-                                            </div>
+                                        {/* CTA Buttons */}
+                                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                            <Link href="/shop">
+                                                <Button size="lg" className="gap-2 w-full sm:w-auto">
+                                                    <ShoppingBag className="h-5 w-5"/>
+                                                    {slide.primaryCTA}
+                                                </Button>
+                                            </Link>
+                                            <Link href="/categories">
+                                                <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
+                                                    {slide.secondaryCTA}
+                                                    <ArrowRight className="h-5 w-5"/>
+                                                </Button>
+                                            </Link>
                                         </div>
 
-                                        {/* Right Image */}
-                                        <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-                                            <Image
-                                                src={slide.image}
-                                                alt={slide.title}
-                                                fill
-                                                className="object-cover"
-                                                priority={index === 0}
-                                            />
-                                            {/* Gradient Overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                        {/* Stats or Features */}
+                                        <div className="flex gap-8 pt-6">
+                                            <div>
+                                                <p className="text-3xl font-bold text-gray-900">10K+</p>
+                                                <p className="text-sm text-gray-600">Happy Customers</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-3xl font-bold text-gray-900">5K+</p>
+                                                <p className="text-sm text-gray-600">Products</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-3xl font-bold text-gray-900">50+</p>
+                                                <p className="text-sm text-gray-600">Categories</p>
+                                            </div>
                                         </div>
+                                    </div>
+
+                                    {/* Right Image */}
+                                    <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
+                                        <Image
+                                            src={slide.image}
+                                            alt={slide.title}
+                                            fill
+                                            className="object-cover"
+                                            priority={index === 0}
+                                        />
+                                        {/* Gradient Overlay */}
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"/>
                                     </div>
                                 </div>
                             </div>
-                        ))}
-
-                        {/* Slide Indicators */}
-                        <div className="flex justify-center gap-3 mt-8">
-                            {slides.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => goToSlide(index)}
-                                    className={`transition-all duration-300 rounded-full ${
-                                        index === currentSlide
-                                            ? "bg-primary w-12 h-3"
-                                            : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
-                                    }`}
-                                    aria-label={`Go to slide ${index + 1}`}
-                                />
-                            ))}
                         </div>
+                    ))}
+
+                    {/* Slide Indicators */}
+                    <div className="flex justify-center gap-3 mt-8">
+                        {slides.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                className={`transition-all duration-300 rounded-full ${
+                                    index === currentSlide
+                                        ? "bg-primary w-12 h-3"
+                                        : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
+                                }`}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
+            </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
-            </section>
+            {/* Decorative Elements */}
+            <div className="absolute top-20 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"/>
+            <div className="absolute bottom-20 left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"/>
+        </section>
     )
-
+}
 export default Hero;
