@@ -109,6 +109,40 @@ const hero = () => {
                                                     </Button>
                                                 </Link>
                                             </div>
+
+                                            {/* Stats or Features */}
+                                            <div className="flex gap-8 pt-6">
+                                                <div>
+                                                    <p className="text-3xl font-bold text-gray-900">10K+</p>
+                                                    <p className="text-sm text-gray-600">Happy Customers</p>
+                                                </div>
+                                                <div>
+                                                    <p className="text-3xl font-bold text-gray-900">5K+</p>
+                                                    <p className="text-sm text-gray-600">Products</p>
+                                                </div>
+                                                <div>
+                                                    <p className="text-3xl font-bold text-gray-900">50+</p>
+                                                    <p className="text-sm text-gray-600">Categories</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Right Image */}
+                                        <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
+                                            <Image
+                                                src={slide.image}
+                                                alt={slide.title}
+                                                fill
+                                                className="object-cover"
+                                                priority={index === 0}
+                                            />
+                                            {/* Gradient Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
         </div>
     );
 };
