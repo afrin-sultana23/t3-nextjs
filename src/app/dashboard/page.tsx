@@ -1,13 +1,39 @@
-import React from 'react';
-import productCard from "~/components/products/productCard";
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import {
+    LayoutDashboard,
+    ShoppingCart,
+    CreditCard,
+    Package,
+    Heart,
+    User,
+    Settings,
+    LogOut,
+    Menu,
+    X,
+    Bell,
+    Search
+} from "lucide-react"
+import { Button } from "~/components/ui/button"
+import { Input } from "~/components/ui/input"
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar"
+import { Badge } from "~/components/ui/badge"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu"
 
 const Page = () => {
-    const rows =[
-        productCard
-    ]
+
     return (
         <div>
-            <picture>"https://ibb.co.com/SXf82mjT"</picture>
+
         </div>
     );
 };
