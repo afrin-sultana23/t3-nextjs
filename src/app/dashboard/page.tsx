@@ -122,6 +122,27 @@ const Page = () => {
                         </button>
                     ))}
 
+                    {/* Logout Button */}
+                    <div className="p-4 border-t border-gray-200">
+                        <Button
+                            variant="ghost"
+                            className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50"
+                        >
+                            <LogOut className="h-5 w-5" />
+                            Logout
+                        </Button>
+                    </div>
+            </aside>
+
+            {/* Sidebar - Mobile */}
+            {sidebarOpen && (
+                <div className="fixed inset-0 z-50 lg:hidden">
+                    {/* Overlay */}
+                    <div
+                        className="absolute inset-0 bg-black/50"
+                        onClick={() => setSidebarOpen(false)}
+                    />
+
         </div>
     );
 };
