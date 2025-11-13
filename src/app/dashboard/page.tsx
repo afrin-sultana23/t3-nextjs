@@ -18,7 +18,13 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "~/components/ui/dropdown-menu"
+} from "~/components/ui/dropdown-menu";
+
+type NavItem = {
+    label: string
+    icon: React.ReactNode
+    badge?: number
+}
 
 const Page = () => {
 
@@ -58,9 +64,36 @@ const Page = () => {
         },
     ]
 
+    const handleNavigation = (label: string) => {
+        setActiveSection(label)
+        setSidebarOpen(false)
+    }
 
     return (
-        <div>
+        <div className="flex h-screen bg-gray-50">
+            {/* Sidebar - Desktop */}
+            <aside className="hidden lg:flex lg:flex-col lg:w-64 bg-white border-r border-gray-200">
+                {/* Logo */}
+                <div className="h-16 flex items-center px-6 border-b border-gray-200">
+                    <Link href="/" className="flex items-center space-x-2">
+                        <div className="bg-primary rounded-lg p-2">
+                            <svg
+                                className="h-6 w-6 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                                />
+                            </svg>
+                        </div>
+                        <span className="text-xl font-bold text-gray-900">E Shop</span>
+                    </Link>
+                </div>
 
         </div>
     );
