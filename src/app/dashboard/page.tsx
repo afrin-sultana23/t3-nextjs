@@ -143,6 +143,36 @@ const Page = () => {
                         onClick={() => setSidebarOpen(false)}
                     />
 
+                    {/* Sidebar */}
+                    <aside className="absolute left-0 top-0 bottom-0 w-64 bg-white">
+                        <div className="h-16 flex items-center justify-between px-6 border-b border-gray-200">
+                            <Link href="/" className="flex items-center space-x-2">
+                                <div className="bg-primary rounded-lg p-2">
+                                    <svg
+                                        className="h-6 w-6 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                                        />
+                                    </svg>
+                                </div>
+                                <span className="text-xl font-bold text-gray-900">E Shop</span>
+                            </Link>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setSidebarOpen(false)}
+                            >
+                                <X className="h-5 w-5" />
+                            </Button>
+                        </div>
+
         </div>
     );
 };
