@@ -95,6 +95,33 @@ const Page = () => {
                     </Link>
                 </div>
 
+                {/* Navigation */}
+                <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                    {navigationItems.map((item) => (
+                        <button
+                            key={item.label}
+                            onClick={() => handleNavigation(item.label)}
+                            className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
+                                activeSection === item.label
+                                    ? "bg-primary text-white"
+                                    : "text-gray-700 hover:bg-gray-100"
+                            }`}
+                        >
+                            <div className="flex items-center gap-3">
+                                {item.icon}
+                                <span className="font-medium">{item.label}</span>
+                            </div>
+                            {item.badge && (
+                                <Badge
+                                    variant={activeSection === item.label ? "secondary" : "default"}
+                                    className="ml-auto"
+                                >
+                                    {item.badge}
+                                </Badge>
+                            )}
+                        </button>
+                    ))}
+
         </div>
     );
 };
