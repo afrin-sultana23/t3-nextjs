@@ -250,6 +250,45 @@ const Page = () => {
                                     </Button>
                                 </div>
 
+                                <nav className="px-4 py-6 space-y-2">
+                                    {navigationItems.map((item) => (
+                                        <button
+                                            key={item.label}
+                                            onClick={() => handleNavigation(item.label)}
+                                            className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
+                                                activeSection === item.label
+                                                    ? "bg-primary text-white"
+                                                    : "text-gray-700 hover:bg-gray-100"
+                                            }`}
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                {item.icon}
+                                                <span className="font-medium">{item.label}</span>
+                                            </div>
+                                            {item.badge && (
+                                                <Badge
+                                                    variant={activeSection === item.label ? "secondary" : "default"}
+                                                >
+                                                    {item.badge}
+                                                </Badge>
+                                            )}
+                                        </button>
+                                    ))}
+                                </nav>
+
+                                <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
+                                    <Button
+                                        variant="ghost"
+                                        className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50"
+                                    >
+                                        <LogOut className="h-5 w-5" />
+                                        Logout
+                                    </Button>
+                                </div>
+                            </aside>
+                        </div>
+                    )}
+
         </div>
     );
 };
