@@ -289,6 +289,32 @@ const Page = () => {
                         </div>
                     )}
 
+                    {/* Main Content */}
+                    <div className="flex-1 flex flex-col overflow-hidden">
+                        {/* Top Header */}
+                        <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 lg:px-8">
+                            {/* Left - Mobile Menu & Search */}
+                            <div className="flex items-center gap-4 flex-1">
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    className="lg:hidden"
+                                    onClick={() => setSidebarOpen(true)}
+                                >
+                                    <Menu className="h-6 w-6" />
+                                </Button>
+
+                                <div className="hidden md:flex items-center flex-1 max-w-md">
+                                    <div className="relative w-full">
+                                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                                        <Input
+                                            placeholder="Search products..."
+                                            className="pl-10"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
         </div>
     );
 };
