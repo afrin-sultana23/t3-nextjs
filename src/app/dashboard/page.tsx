@@ -359,6 +359,16 @@ const Page = () => {
                             </div>
                         </header>
 
+                        {/* Main Content Area */}
+                        <main className="flex-1 overflow-y-auto p-4 lg:p-8">
+                            <div className="max-w-7xl mx-auto">
+                                <div className="mb-8">
+                                    <h1 className="text-3xl font-bold text-gray-900">{activeSection}</h1>
+                                    <p className="text-gray-600 mt-2">
+                                        You are viewing the {activeSection.toLowerCase()} section
+                                    </p>
+                                </div>
+
         </div>
     );
 };
