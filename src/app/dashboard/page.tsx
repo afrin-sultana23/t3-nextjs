@@ -323,6 +323,42 @@ const Page = () => {
                                     <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
                                 </Button>
 
+                                {/* User Menu */}
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+                                            <Avatar>
+                                                <AvatarImage src="https://github.com/shadcn.png" alt="User" />
+                                                <AvatarFallback>JD</AvatarFallback>
+                                            </Avatar>
+                                        </Button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className="w-56" align="end">
+                                        <DropdownMenuLabel>
+                                            <div className="flex flex-col space-y-1">
+                                                <p className="text-sm font-medium">John Doe</p>
+                                                <p className="text-xs text-muted-foreground">john@example.com</p>
+                                            </div>
+                                        </DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>
+                                            <User className="mr-2 h-4 w-4" />
+                                            Profile
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem>
+                                            <Settings className="mr-2 h-4 w-4" />
+                                            Settings
+                                        </DropdownMenuItem>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem className="text-red-600">
+                                            <LogOut className="mr-2 h-4 w-4" />
+                                            Logout
+                                        </DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                            </div>
+                        </header>
+
         </div>
     );
 };
