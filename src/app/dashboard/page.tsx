@@ -369,8 +369,19 @@ const Page = () => {
                                     </p>
                                 </div>
 
-        </div>
-    );
-};
+
+                                {/* Placeholder content area */}
+                                <div className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-12 text-center">
+                                    <p className="text-gray-500 text-lg">
+                                        Content for <span className="font-semibold">{activeSection}</span> will be displayed here
+                                    </p>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            )
+            }
+
 
 export default Page;
