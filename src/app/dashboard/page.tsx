@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link"
-import {
-    LayoutDashboard, ShoppingCart,
-    CreditCard, Package, Heart, User, Settings,
+import {  LayoutDashboard, ShoppingCart, CreditCard, Package, Heart, User, Settings,
     LogOut, Menu, X, Bell, Search
 } from "lucide-react"
 import { Button } from "~/components/ui/button"
@@ -14,8 +12,7 @@ import { Badge } from "~/components/ui/badge"
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
+    DropdownMenuItem, DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
@@ -34,33 +31,33 @@ const Page = () => {
     const navigationItems: NavItem[] = [
         {
             label: "Dashboard",
-            icon: <LayoutDashboard className="h-5 w-5" />,
+            icon: <LayoutDashboard className="h-5 w-5"/>,
         },
         {
             label: "My Cart",
-            icon: <ShoppingCart className="h-5 w-5" />,
+            icon: <ShoppingCart className="h-5 w-5"/>,
             badge: 3,
         },
         {
             label: "Orders",
-            icon: <Package className="h-5 w-5" />,
+            icon: <Package className="h-5 w-5"/>,
         },
         {
             label: "Payments",
-            icon: <CreditCard className="h-5 w-5" />,
+            icon: <CreditCard className="h-5 w-5"/>,
         },
         {
             label: "Wishlist",
-            icon: <Heart className="h-5 w-5" />,
+            icon: <Heart className="h-5 w-5"/>,
             badge: 5,
         },
         {
             label: "Profile",
-            icon: <User className="h-5 w-5" />,
+            icon: <User className="h-5 w-5"/>,
         },
         {
             label: "Settings",
-            icon: <Settings className="h-5 w-5" />,
+            icon: <Settings className="h-5 w-5"/>,
         },
     ]
 
@@ -128,10 +125,11 @@ const Page = () => {
                             variant="ghost"
                             className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50"
                         >
-                            <LogOut className="h-5 w-5" />
+                            <LogOut className="h-5 w-5"/>
                             Logout
                         </Button>
                     </div>
+                </nav>
             </aside>
 
             {/* Sidebar - Mobile */}
@@ -169,7 +167,7 @@ const Page = () => {
                                 size="icon"
                                 onClick={() => setSidebarOpen(false)}
                             >
-                                <X className="h-5 w-5" />
+                                <X className="h-5 w-5"/>
                             </Button>
                         </div>
 
@@ -205,7 +203,7 @@ const Page = () => {
                                 variant="ghost"
                                 className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50"
                             >
-                                <LogOut className="h-5 w-5" />
+                                <LogOut className="h-5 w-5"/>
                                 Logout
                             </Button>
                         </div>
@@ -246,7 +244,7 @@ const Page = () => {
                                         size="icon"
                                         onClick={() => setSidebarOpen(false)}
                                     >
-                                        <X className="h-5 w-5" />
+                                        <X className="h-5 w-5"/>
                                     </Button>
                                 </div>
 
@@ -281,7 +279,7 @@ const Page = () => {
                                         variant="ghost"
                                         className="w-full justify-start gap-3 text-red-600 hover:text-red-700 hover:bg-red-50"
                                     >
-                                        <LogOut className="h-5 w-5" />
+                                        <LogOut className="h-5 w-5"/>
                                         Logout
                                     </Button>
                                 </div>
@@ -292,7 +290,8 @@ const Page = () => {
                     {/* Main Content */}
                     <div className="flex-1 flex flex-col overflow-hidden">
                         {/* Top Header */}
-                        <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 lg:px-8">
+                        <header
+                            className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 lg:px-8">
                             {/* Left - Mobile Menu & Search */}
                             <div className="flex items-center gap-4 flex-1">
                                 <Button
@@ -301,12 +300,13 @@ const Page = () => {
                                     className="lg:hidden"
                                     onClick={() => setSidebarOpen(true)}
                                 >
-                                    <Menu className="h-6 w-6" />
+                                    <Menu className="h-6 w-6"/>
                                 </Button>
 
                                 <div className="hidden md:flex items-center flex-1 max-w-md">
                                     <div className="relative w-full">
-                                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                                        <Search
+                                            className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400"/>
                                         <Input
                                             placeholder="Search products..."
                                             className="pl-10"
@@ -319,8 +319,8 @@ const Page = () => {
                             <div className="flex items-center gap-4">
                                 {/* Notifications */}
                                 <Button variant="ghost" size="icon" className="relative">
-                                    <Bell className="h-5 w-5" />
-                                    <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
+                                    <Bell className="h-5 w-5"/>
+                                    <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"/>
                                 </Button>
 
                                 {/* User Menu */}
@@ -328,7 +328,7 @@ const Page = () => {
                                     <DropdownMenuTrigger asChild>
                                         <Button variant="ghost" className="relative h-10 w-10 rounded-full">
                                             <Avatar>
-                                                <AvatarImage src="https://github.com/shadcn.png" alt="User" />
+                                                <AvatarImage src="https://github.com/shadcn.png" alt="User"/>
                                                 <AvatarFallback>JD</AvatarFallback>
                                             </Avatar>
                                         </Button>
@@ -340,18 +340,18 @@ const Page = () => {
                                                 <p className="text-xs text-muted-foreground">john@example.com</p>
                                             </div>
                                         </DropdownMenuLabel>
-                                        <DropdownMenuSeparator />
+                                        <DropdownMenuSeparator/>
                                         <DropdownMenuItem>
-                                            <User className="mr-2 h-4 w-4" />
+                                            <User className="mr-2 h-4 w-4"/>
                                             Profile
                                         </DropdownMenuItem>
                                         <DropdownMenuItem>
-                                            <Settings className="mr-2 h-4 w-4" />
+                                            <Settings className="mr-2 h-4 w-4"/>
                                             Settings
                                         </DropdownMenuItem>
-                                        <DropdownMenuSeparator />
+                                        <DropdownMenuSeparator/>
                                         <DropdownMenuItem className="text-red-600">
-                                            <LogOut className="mr-2 h-4 w-4" />
+                                            <LogOut className="mr-2 h-4 w-4"/>
                                             Logout
                                         </DropdownMenuItem>
                                     </DropdownMenuContent>
@@ -371,9 +371,11 @@ const Page = () => {
 
 
                                 {/* Placeholder content area */}
-                                <div className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-12 text-center">
+                                <div
+                                    className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-12 text-center">
                                     <p className="text-gray-500 text-lg">
-                                        Content for <span className="font-semibold">{activeSection}</span> will be displayed here
+                                        Content for <span className="font-semibold">{activeSection}</span> will be
+                                        displayed here
                                     </p>
                                 </div>
                             </div>
@@ -382,6 +384,7 @@ const Page = () => {
                 </div>
             )
             }
-
-
+        </div>
+    )
+}
 export default Page;
