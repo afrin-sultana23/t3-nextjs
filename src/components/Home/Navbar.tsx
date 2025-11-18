@@ -160,31 +160,8 @@ export function Navbar() {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                        <ul className="grid w-[200px] gap-4">
-                            <li>
-                                <NavigationMenuLink asChild>
-                                    <Link href="#" className="flex-row items-center gap-2">
-                                        <CircleHelpIcon />
-                                        Backlog
-                                    </Link>
-                                </NavigationMenuLink>
-                                <NavigationMenuLink asChild>
-                                    <Link href="#" className="flex-row items-center gap-2">
-                                        <CircleIcon />
-                                        To Do
-                                    </Link>
-                                </NavigationMenuLink>
-                                <NavigationMenuLink asChild>
-                                    <Link href="#" className="flex-row items-center gap-2">
-                                        <CircleCheckIcon />
-                                        Done
-                                    </Link>
-                                </NavigationMenuLink>
-                            </li>
-                        </ul>
-                    </NavigationMenuContent>
+                    <NavigationMenuTrigger >
+                        <Link href="/dashboard">Dashboard</Link></NavigationMenuTrigger>
                 </NavigationMenuItem>
 
             </NavigationMenuList>
