@@ -3,16 +3,15 @@ import Link from "next/link";
 
 const Topbar = () => {
     return (
-        <div>
-            <div className="max-w-5xl flex justify-between mx-auto p-3 bg-blue-800 text-md tracking-widest text-amber-50">
+        <div className="w-full mx-auto  bg-blue-800">
+            <div className=" w-4/5 mx-auto flex justify-between p-2  text-sm font-semibold tracking-wider text-gray-300">
                 <div>
-                    <p className="text-amber-50">50%  discount for ordering $99</p>
+                    <p className=""> ⋆·˚ ༘ * 50%  discount for ordering $99 ⋆·˚ ༘ *</p>
                 </div>
-                <div>
-                    <li>
+                <div className="flex gap-4 underline">
+
                         <Link href={"#"}>Best deals</Link>
                         <Link href={"#"}>Help & Contact</Link>
-                    </li>
 
                 </div>
             </div>
