@@ -91,6 +91,14 @@ const Page = () => {
         }
         console.log("Form submitted:", formattedData)
         // TODO: Add your registration logic here (API call, etc.)
+        fetch("http://localhost:3000", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        }).then(res => res.json(data))
+
     }
 
     const handleGoogleRegister = () => {
