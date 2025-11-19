@@ -4,10 +4,13 @@ const Topbar = () => {
     return (
         <div>
             <div className="w-full flex justify-between mx-auto p-3">
-                <div></div>
-                <div></div>
+                <div>
+                    <p>50%  discount for ordering $99</p>
+                </div>
+                <div>
+                    <p>Help & Contact</p>
+                </div>
             </div>
-           <p>10%  discount</p>
 
 
         </div>
