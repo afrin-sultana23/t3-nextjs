@@ -96,8 +96,20 @@ const Page = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
-        }).then(res => res.json(data))
+            body: JSON.stringify({name, email, password}),
+        })
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Registration failed');
+        }
+
+        // Handle successful registration (e.g., redirect to login, show success message)
+        console.log('Registration successful!');
+    } catch (error) {
+        console.error('Registration error:', error.message);
+        // Handle error (e.g., display error message to user)
+    }
+}
 
     }
 
