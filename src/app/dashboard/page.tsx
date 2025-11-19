@@ -43,7 +43,7 @@ const Page = () => {
             icon: <Package className="h-5 w-5"/>,
         },
         {
-            label: "Payments",
+            label: "payment",
             icon: <CreditCard className="h-5 w-5"/>,
         },
         {

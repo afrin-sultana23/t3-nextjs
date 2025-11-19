@@ -5,19 +5,12 @@ import { z } from "zod"
 import { useState } from "react"
 import { Button } from "~/components/ui/button"
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+    Card, CardContent,
+    CardDescription, CardHeader, CardTitle,
 } from "~/components/ui/card"
 import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
+    Form, FormControl, FormField, FormItem,
+    FormLabel, FormMessage,
 } from "~/components/ui/form"
 import { Input } from "~/components/ui/input"
 import { Eye, EyeOff } from "lucide-react"
@@ -49,6 +42,7 @@ const Page = () => {
     const onSubmit = (data: LoginFormValues) => {
         console.log("Login submitted:", data)
         // TODO: Add your authentication logic here (API call, etc.)
+
     }
 
     const handleGoogleLogin = () => {

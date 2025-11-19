@@ -91,24 +91,21 @@ const Page = () => {
         }
         console.log("Form submitted:", formattedData)
         // TODO: Add your registration logic here (API call, etc.)
-        fetch("http://localhost:3000", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({name, email, password}),
-        })
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Registration failed');
-        }
+        // fetch("http://localhost:3000", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({name, email, password}),
+        // })
+        // if (!response.ok) {
+        //     const errorData = await response.json();
+        //     throw new Error(errorData.message || 'Registration failed');
+        // }
 
         // Handle successful registration (e.g., redirect to login, show success message)
-        console.log('Registration successful!');
-    } catch (error) {
-        console.error('Registration error:', error.message);
-        // Handle error (e.g., display error message to user)
-    }
+//         console.log('Registration successful!');
+//     }
 }
 
     }
