@@ -54,6 +54,18 @@ const Page = () => {
                 <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
                 <p className="text-gray-600 mt-2">{cartItems.length} items in your cart</p>
             </div>
+
+            {cartItems.length === 0 ? (
+                <div className="bg-white rounded-lg border border-gray-200 p-12 text-center">
+                    <ShoppingCartIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Your cart is empty</h3>
+                    <p className="text-gray-600 mb-6">Add some products to get started!</p>
+                    <Link href="/">
+                        <Button>Continue Shopping</Button>
+                    </Link>
+                </div>
+            ) : (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
         </div>
     );
