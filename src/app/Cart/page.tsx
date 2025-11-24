@@ -102,6 +102,25 @@ const Page = () => {
                                         >
                                             <Trash2 className="h-4 w-4" />
                                         </Button>
+
+                                        <div className="flex items-center gap-2 border border-gray-300 rounded-lg">
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                onClick={() => updateQuantity(item.id, -1)}
+                                                className="h-8 w-8"
+                                            >
+                                                <Minus className="h-3 w-3" />
+                                            </Button>
+                                            <span className="w-8 text-center font-medium">{item.quantity}</span>
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                onClick={() => updateQuantity(item.id, 1)}
+                                                className="h-8 w-8"
+                                            >
+                                                <Plus className="h-3 w-3" />
+                                            </Button>
             
         </div>
     );
