@@ -79,6 +79,19 @@ const Page = () => {
                                             className="object-cover"
                                         />
                                     </div>
+
+                                    <div className="flex-1 min-w-0">
+                                        <h3 className="font-semibold text-gray-900 mb-1">{item.name}</h3>
+                                        {item.color && (
+                                            <p className="text-sm text-gray-600">Color: {item.color}</p>
+                                        )}
+                                        {item.size && (
+                                            <p className="text-sm text-gray-600">Size: {item.size}</p>
+                                        )}
+                                        <p className="text-lg font-bold text-primary mt-2">
+                                            ${item.price.toFixed(2)}
+                                        </p>
+                                    </div>
             
         </div>
     );
