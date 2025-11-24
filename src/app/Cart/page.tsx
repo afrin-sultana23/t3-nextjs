@@ -1,5 +1,16 @@
 import React from 'react';
 
+
+type CartItem = {
+    id: string
+    name: string
+    price: number
+    quantity: number
+    image: string
+    size?: string
+    color?: string
+}
+
 const Page = () => {
 
     const [cartItems, setCartItems] = useState<CartItem[]>([
@@ -121,6 +132,12 @@ const Page = () => {
                                             >
                                                 <Plus className="h-3 w-3" />
                                             </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
             
         </div>
     );
