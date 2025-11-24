@@ -66,6 +66,19 @@ const Page = () => {
                 </div>
             ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* Cart Items */}
+                    <div className="lg:col-span-2 space-y-4">
+                        {cartItems.map((item) => (
+                            <div key={item.id} className="bg-white rounded-lg border border-gray-200 p-6">
+                                <div className="flex gap-4">
+                                    <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
             
         </div>
     );
