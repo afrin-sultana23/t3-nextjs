@@ -11,22 +11,22 @@ const Page = () => {
             image: "https://ibb.co.com/SXf82mjT",
             color: "Black"
         },
-        // {
-        //     id: "2",
-        //     name: "Smart Watch",
-        //     price: 299.99,
-        //     quantity: 1,
-        //     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop",
-        //     size: "42mm"
-        // },
-        // {
-        //     id: "3",
-        //     name: "Leather Backpack",
-        //     price: 89.99,
-        //     quantity: 2,
-        //     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop",
-        //     color: "Brown"
-        // }
+        {
+            id: "2",
+            name: "Smart Watch",
+            price: 299.99,
+            quantity: 1,
+            image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop",
+            size: "42mm"
+        },
+        {
+            id: "3",
+            name: "Leather Backpack",
+            price: 89.99,
+            quantity: 2,
+            image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop",
+            color: "Brown"
+        }
     ])
 
     const updateQuantity = (id: string, delta: number) => {
@@ -49,7 +49,11 @@ const Page = () => {
     const total = subtotal + shipping + tax
 
     return (
-        <div>
+        <div className="space-y-6">
+            <div>
+                <h1 className="text-3xl font-bold text-gray-900">Shopping Cart</h1>
+                <p className="text-gray-600 mt-2">{cartItems.length} items in your cart</p>
+            </div>
             
         </div>
     );
