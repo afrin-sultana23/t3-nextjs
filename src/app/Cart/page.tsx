@@ -92,6 +92,16 @@ const Page = () => {
                                             ${item.price.toFixed(2)}
                                         </p>
                                     </div>
+
+                                    <div className="flex flex-col items-end gap-4">
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            onClick={() => removeItem(item.id)}
+                                            className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                                        >
+                                            <Trash2 className="h-4 w-4" />
+                                        </Button>
             
         </div>
     );
