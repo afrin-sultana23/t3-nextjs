@@ -180,9 +180,17 @@ const Page = () => {
                                     <ArrowRight className="h-4 w-4" />
                                 </Button>
                             </Link>
-            
+                            <Link href="/">
+                                <Button variant="ghost" className="w-full mt-2">
+                                    Continue Shopping
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-    );
-};
+    )
+}
 
 export default Page;
