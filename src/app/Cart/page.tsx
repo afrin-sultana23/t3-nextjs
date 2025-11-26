@@ -174,6 +174,12 @@ const Page = () => {
                                     <span>${total.toFixed(2)}</span>
                                 </div>
                             </div>
+                            <Link href="/dashboard/payment">
+                                <Button className="w-full gap-2" size="lg">
+                                    Proceed to Checkout
+                                    <ArrowRight className="h-4 w-4" />
+                                </Button>
+                            </Link>
             
         </div>
     );
