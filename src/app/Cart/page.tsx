@@ -160,6 +160,14 @@ const Page = () => {
                                     <span>Subtotal</span>
                                     <span>${subtotal.toFixed(2)}</span>
                                 </div>
+                                <div className="flex justify-between text-gray-600">
+                                    <span>Shipping</span>
+                                    <span>${shipping.toFixed(2)}</span>
+                                </div>
+                                <div className="flex justify-between text-gray-600">
+                                    <span>Tax</span>
+                                    <span>${tax.toFixed(2)}</span>
+                                </div>
             
         </div>
     );
