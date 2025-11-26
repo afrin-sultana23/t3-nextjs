@@ -168,6 +168,12 @@ const Page = () => {
                                     <span>Tax</span>
                                     <span>${tax.toFixed(2)}</span>
                                 </div>
+                                <Separator />
+                                <div className="flex justify-between text-lg font-bold text-gray-900">
+                                    <span>Total</span>
+                                    <span>${total.toFixed(2)}</span>
+                                </div>
+                            </div>
             
         </div>
     );
