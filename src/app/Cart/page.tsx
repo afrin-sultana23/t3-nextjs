@@ -1,5 +1,16 @@
-import React from 'react';
-
+"use client"
+import { useState } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import {
+    Trash2,
+    Plus,
+    Minus,
+    ArrowRight,
+    ShoppingCart as ShoppingCartIcon
+} from "lucide-react"
+import { Button } from "~/components/ui/button"
+import { Separator } from "~/components/ui/separator"
 
 type CartItem = {
     id: string
@@ -138,6 +149,17 @@ const Page = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* Order Summary */}
+                    <div className="lg:col-span-1">
+                        <div className="bg-white rounded-lg border border-gray-200 p-6 sticky top-4">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Order Summary</h3>
+
+                            <div className="space-y-3 mb-4">
+                                <div className="flex justify-between text-gray-600">
+                                    <span>Subtotal</span>
+                                    <span>${subtotal.toFixed(2)}</span>
+                                </div>
             
         </div>
     );
