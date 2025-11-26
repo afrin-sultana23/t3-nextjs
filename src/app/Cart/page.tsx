@@ -38,7 +38,7 @@ const Page = () => {
             name: "Smart Watch",
             price: 299.99,
             quantity: 1,
-            image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop",
+            image: "https://ibb.co.com/SXf82mjT",
             size: "42mm"
         },
         {
@@ -46,7 +46,7 @@ const Page = () => {
             name: "Leather Backpack",
             price: 89.99,
             quantity: 2,
-            image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop",
+            image: "https://ibb.co.com/SXf82mjT",
             color: "Brown"
         }
     ])
@@ -64,7 +64,7 @@ const Page = () => {
     const removeItem = (id: string) => {
         setCartItems(items => items.filter(item => item.id !== id))
     }
-
+    const dateString = now.toDateString();
     const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
     const shipping = 10
     const tax = subtotal * 0.1
@@ -153,7 +153,8 @@ const Page = () => {
                     {/* Order Summary */}
                     <div className="lg:col-span-1">
                         <div className="bg-white rounded-lg border border-gray-200 p-6 sticky top-4">
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Order Summary</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Order Summary
+                            <span className={"text-gray-500 text-sm"}>date:{dateString}</span></h3>
 
                             <div className="space-y-3 mb-4">
                                 <div className="flex justify-between text-gray-600">
