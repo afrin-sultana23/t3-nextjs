@@ -64,6 +64,7 @@ const Page = () => {
     const removeItem = (id: string) => {
         setCartItems(items => items.filter(item => item.id !== id))
     }
+    const now = new Date();
     const dateString = now.toDateString();
     const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
     const shipping = 10
