@@ -79,6 +79,22 @@ const Page = () => {
             icon: <Package className="h-5 w-5" />,
         },
         {
+            label: "Wishlist",
+            href: "/dashboard/wishlist",
+            icon: <Heart className="h-5 w-5" />,
+            badge: 5,
+        },
+        {
+            label: "Profile",
+            href: "/dashboard/profile",
+            icon: <User className="h-5 w-5" />,
+        },
+        {
+            label: "Settings",
+            href: "/dashboard/settings",
+            icon: <Settings className="h-5 w-5" />,
+        },
+        {
             label: "payment",
             icon: <CreditCard className="h-5 w-5"/>,
         },
