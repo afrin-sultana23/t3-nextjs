@@ -60,6 +60,7 @@ const Page = () => {
 
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [activeSection, setActiveSection] = useState("Dashboard")
+    const pathname = usePathname()
 
     const navigationItems: NavItem[] = [
         {
