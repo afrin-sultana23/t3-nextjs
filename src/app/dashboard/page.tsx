@@ -94,24 +94,9 @@ const Page = () => {
             href: "/dashboard/settings",
             icon: <Settings className="h-5 w-5" />,
         },
-        {
-            label: "payment",
-            icon: <CreditCard className="h-5 w-5"/>,
-        },
-        {
-            label: "Wishlist",
-            icon: <Heart className="h-5 w-5"/>,
-            badge: 5,
-        },
-        {
-            label: "Profile",
-            icon: <User className="h-5 w-5"/>,
-        },
-        {
-            label: "Settings",
-            icon: <Settings className="h-5 w-5"/>,
-        },
     ]
+
+    const isActive = (href: string) => pathname === href
 
     const handleNavigation = (label: string) => {
         setActiveSection(label)
