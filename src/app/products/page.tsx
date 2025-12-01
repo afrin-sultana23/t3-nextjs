@@ -83,6 +83,12 @@ const Page = () => {
             name: "Premium Leather Backpack",
             description: "Durable leather backpack with laptop compartment and USB charging port",
             price: 89.99,
+            image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+            category: "Accessories",
+            rating: 4.3,
+            reviewCount: 89,
+            inStock: false
+        },
     ]
 
     return (
