@@ -42,6 +42,14 @@ type Product = {
 }
 
 const Page = () => {
+
+    const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+    const [searchQuery, setSearchQuery] = useState("")
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+    const [priceRange, setPriceRange] = useState<string>("all")
+    const [sortBy, setSortBy] = useState<string>("featured")
+    const [wishlistedItems, setWishlistedItems] = useState<string[]>([])
+
     return (
         <div>
             <h1>all products page</h1>
