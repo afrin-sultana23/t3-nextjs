@@ -65,6 +65,19 @@ const Page = () => {
             inStock: true,
             discount: 38
         },
+        {
+            id: "2",
+            name: "Smart Watch Series 5",
+            description: "Track your fitness, heart rate, and stay connected on the go",
+            price: 299.99,
+            originalPrice: 399.99,
+            image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+            category: "Wearables",
+            rating: 4.8,
+            reviewCount: 567,
+            inStock: true,
+            discount: 25
+        },
     ]
 
     return (
