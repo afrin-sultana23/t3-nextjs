@@ -50,6 +50,23 @@ const Page = () => {
     const [sortBy, setSortBy] = useState<string>("featured")
     const [wishlistedItems, setWishlistedItems] = useState<string[]>([])
 
+    // Sample products data
+    const allProducts: Product[] = [
+        {
+            id: "1",
+            name: "Wireless Bluetooth Headphones",
+            description: "High-quality sound with noise cancellation and 30-hour battery life",
+            price: 79.99,
+            originalPrice: 129.99,
+            image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+            category: "Electronics",
+            rating: 4.5,
+            reviewCount: 234,
+            inStock: true,
+            discount: 38
+        },
+    ]
+
     return (
         <div>
             <h1>all products page</h1>
