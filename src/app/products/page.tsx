@@ -78,6 +78,11 @@ const Page = () => {
             inStock: true,
             discount: 25
         },
+        {
+            id: "3",
+            name: "Premium Leather Backpack",
+            description: "Durable leather backpack with laptop compartment and USB charging port",
+            price: 89.99,
     ]
 
     return (
