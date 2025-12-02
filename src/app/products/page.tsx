@@ -106,6 +106,13 @@ const Page = () => {
             description: "RGB gaming mouse with customizable buttons and 16000 DPI",
             price: 49.99,
             originalPrice: 79.99,
+            image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+            category: "Electronics",
+            rating: 4.7,
+            reviewCount: 312,
+            inStock: true,
+            discount: 37
+        },
     ]
 
     return (
