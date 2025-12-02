@@ -113,6 +113,11 @@ const Page = () => {
             inStock: true,
             discount: 37
         },
+        {
+            id: "6",
+            name: "Minimalist Wallet",
+            description: "Slim leather wallet with RFID protection",
+            price: 29.99,
     ]
 
     return (
