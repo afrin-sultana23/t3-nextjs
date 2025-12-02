@@ -94,6 +94,12 @@ const Page = () => {
             name: "4K Action Camera",
             description: "Waterproof action camera with 4K video and image stabilization",
             price: 199.99,
+            image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&h=500&fit=crop",
+            category: "Electronics",
+            rating: 4.6,
+            reviewCount: 432,
+            inStock: true
+        },
     ]
 
     return (
