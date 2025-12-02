@@ -100,6 +100,12 @@ const Page = () => {
             reviewCount: 432,
             inStock: true
         },
+        {
+            id: "5",
+            name: "Wireless Gaming Mouse",
+            description: "RGB gaming mouse with customizable buttons and 16000 DPI",
+            price: 49.99,
+            originalPrice: 79.99,
     ]
 
     return (
