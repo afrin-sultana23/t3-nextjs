@@ -158,7 +158,15 @@ const Page = () => {
         const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             product.description.toLowerCase().includes(searchQuery.toLowerCase())
 
-    return (
+        // Category filter
+        const matchesCategory = selectedCategories.length === 0 ||
+            selectedCategories.includes(product.category)
+
+        // Price filter
+        let matchesPrice = true
+
+
+        return (
         <div>
             <h1>all products page</h1>
 
