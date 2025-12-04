@@ -130,6 +130,13 @@ const Page = () => {
             description: "True wireless earbuds with active noise cancellation",
             price: 159.99,
             originalPrice: 199.99,
+            image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=500&fit=crop",
+            category: "Electronics",
+            rating: 4.9,
+            reviewCount: 892,
+            inStock: true,
+            discount: 20
+        },
     ]
 
     return (
