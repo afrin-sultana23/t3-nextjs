@@ -137,6 +137,17 @@ const Page = () => {
             inStock: true,
             discount: 20
         },
+        {
+            id: "8",
+            name: "Fitness Tracker Band",
+            description: "Water-resistant fitness tracker with heart rate monitor",
+            price: 69.99,
+            image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+            category: "Wearables",
+            rating: 4.2,
+            reviewCount: 234,
+            inStock: true
+        }
     ]
 
     return (
