@@ -124,6 +124,12 @@ const Page = () => {
             reviewCount: 156,
             inStock: true
         },
+        {
+            id: "7",
+            name: "Wireless Earbuds Pro",
+            description: "True wireless earbuds with active noise cancellation",
+            price: 159.99,
+            originalPrice: 199.99,
     ]
 
     return (
