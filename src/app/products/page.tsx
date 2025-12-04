@@ -118,6 +118,12 @@ const Page = () => {
             name: "Minimalist Wallet",
             description: "Slim leather wallet with RFID protection",
             price: 29.99,
+            image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop",
+            category: "Accessories",
+            rating: 4.4,
+            reviewCount: 156,
+            inStock: true
+        },
     ]
 
     return (
