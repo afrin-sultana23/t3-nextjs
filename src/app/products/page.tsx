@@ -169,6 +169,15 @@ const Page = () => {
         if (priceRange === "100to200") matchesPrice = product.price > 100 && product.price <= 200
         if (priceRange === "over200") matchesPrice = product.price > 200
 
+        return matchesSearch && matchesCategory && matchesPrice
+    }).sort((a, b) => {
+        if (sortBy === "priceLow") return a.price - b.price
+        if (sortBy === "priceHigh") return b.price - a.price
+        if (sortBy === "rating") return b.rating - a.rating
+        if (sortBy === "newest") return b.id.localeCompare(a.id)
+        return 0 // featured (default order)
+    })
+
         return (
         <div>
             <h1>all products page</h1>
