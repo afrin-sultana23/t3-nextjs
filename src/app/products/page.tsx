@@ -164,7 +164,10 @@ const Page = () => {
 
         // Price filter
         let matchesPrice = true
-
+        if (priceRange === "under50") matchesPrice = product.price < 50
+        if (priceRange === "50to100") matchesPrice = product.price >= 50 && product.price <= 100
+        if (priceRange === "100to200") matchesPrice = product.price > 100 && product.price <= 200
+        if (priceRange === "over200") matchesPrice = product.price > 200
 
         return (
         <div>
