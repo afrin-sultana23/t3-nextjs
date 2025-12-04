@@ -150,6 +150,14 @@ const Page = () => {
         }
     ]
 
+    const categories = ["Electronics", "Wearables", "Accessories"]
+
+    // Filter and sort products
+    const filteredProducts = allProducts.filter((product) => {
+        // Search filter
+        const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            product.description.toLowerCase().includes(searchQuery.toLowerCase())
+
     return (
         <div>
             <h1>all products page</h1>
