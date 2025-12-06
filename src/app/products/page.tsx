@@ -213,6 +213,11 @@ const Page = () => {
                                 onCheckedChange={() => handleCategoryChange(category)}
                             />
 
+                        </div>
+                    ))}
+                </div>
+            </div>
+
         return (
         <div>
             <h1>all products page</h1>
