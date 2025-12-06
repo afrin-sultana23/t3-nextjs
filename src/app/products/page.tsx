@@ -205,6 +205,13 @@ const Page = () => {
             <div>
                 <h3 className="font-semibold text-lg mb-3">Categories</h3>
                 <div className="space-y-2">
+                    {categories.map((category) => (
+                        <div key={category} className="flex items-center space-x-2">
+                            <Checkbox
+                                id={category}
+                                checked={selectedCategories.includes(category)}
+                                onCheckedChange={() => handleCategoryChange(category)}
+                            />
 
         return (
         <div>
