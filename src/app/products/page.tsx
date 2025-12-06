@@ -194,6 +194,10 @@ const Page = () => {
         )
     }
 
+    const handleAddToCart = (product: Product) => {
+
+    }
+
         return (
         <div>
             <h1>all products page</h1>
