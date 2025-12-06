@@ -178,6 +178,14 @@ const Page = () => {
         return 0 // featured (default order)
     })
 
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategories(prev =>
+            prev.includes(category)
+                ? prev.filter(c => c !== category)
+                : [...prev, category]
+        )
+    }
+
         return (
         <div>
             <h1>all products page</h1>
