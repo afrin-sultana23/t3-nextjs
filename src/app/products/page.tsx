@@ -199,6 +199,13 @@ const Page = () => {
         alert(`Added "${product.name}" to cart!!`)
     }
 
+    // Filter Sidebar Component
+    const FilterSidebar = () => (
+        <div className="space-y-6">
+            <div>
+                <h3 className="font-semibold text-lg mb-3">Categories</h3>
+                <div className="space-y-2">
+
         return (
         <div>
             <h1>all products page</h1>
