@@ -186,6 +186,14 @@ const Page = () => {
         )
     }
 
+    const toggleWishlist = (productId: string) => {
+        setWishlistedItems(prev =>
+            prev.includes(productId)
+                ? prev.filter(id => id !== productId)
+                : [...prev, productId]
+        )
+    }
+
         return (
         <div>
             <h1>all products page</h1>
