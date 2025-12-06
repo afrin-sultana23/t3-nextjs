@@ -195,7 +195,8 @@ const Page = () => {
     }
 
     const handleAddToCart = (product: Product) => {
-
+        console.log("Added to cart:", product)
+        alert(`Added "${product.name}" to cart!!`)
     }
 
         return (
