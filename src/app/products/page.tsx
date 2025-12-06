@@ -212,7 +212,9 @@ const Page = () => {
                                 checked={selectedCategories.includes(category)}
                                 onCheckedChange={() => handleCategoryChange(category)}
                             />
-
+                            <Label htmlFor={category} className="cursor-pointer">
+                                {category}
+                            </Label>
                         </div>
                     ))}
                 </div>
