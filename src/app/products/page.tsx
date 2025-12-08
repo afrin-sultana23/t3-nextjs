@@ -231,6 +231,10 @@ const Page = () => {
                         <RadioGroupItem value="under50" id="under50" />
                         <Label htmlFor="under50" className="cursor-pointer">Under $50</Label>
                     </div>
+                    <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="50to100" id="50to100" />
+                        <Label htmlFor="50to100" className="cursor-pointer">$50 - $100</Label>
+                    </div>
 
         return (
         <div>
