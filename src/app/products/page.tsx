@@ -246,6 +246,16 @@ const Page = () => {
                 </RadioGroup>
             </div>
 
+            <Button
+                variant="outline"
+                className="w-full"
+
+            >
+                Clear Filters
+            </Button>
+        </div>
+    )
+
         return (
         <div>
             <h1>all products page</h1>
