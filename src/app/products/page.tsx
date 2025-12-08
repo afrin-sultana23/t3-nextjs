@@ -240,7 +240,8 @@ const Page = () => {
                         <Label htmlFor="100to200" className="cursor-pointer">$100 - $200</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-
+                        <RadioGroupItem value="over200" id="over200" />
+                        <Label htmlFor="over200" className="cursor-pointer">Over $200</Label>
                     </div>
                 </RadioGroup>
             </div>
