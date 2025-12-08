@@ -249,7 +249,11 @@ const Page = () => {
             <Button
                 variant="outline"
                 className="w-full"
-
+                onClick={() => {
+                    setSelectedCategories([])
+                    setPriceRange("all")
+                    setSearchQuery("")
+                }}
             >
                 Clear Filters
             </Button>
