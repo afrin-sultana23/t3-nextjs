@@ -225,6 +225,12 @@ const Page = () => {
                 <RadioGroup value={priceRange} onValueChange={setPriceRange}>
                     <div className="flex items-center space-x-2">
                         <RadioGroupItem value="all" id="all" />
+                        <Label htmlFor="all" className="cursor-pointer">All Prices</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="under50" id="under50" />
+                        <Label htmlFor="under50" className="cursor-pointer">Under $50</Label>
+                    </div>
 
         return (
         <div>
