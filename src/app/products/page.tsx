@@ -265,10 +265,12 @@ const Page = () => {
         const isWishlisted = wishlistedItems.includes(product.id)
 
         return (
-        <div>
-            <h1>all products page</h1>
+            <Card className="group relative overflow-hidden transition-all hover:shadow-lg">
+                {/* Badges */}
+                <div className="absolute top-2 left-2 z-10 flex flex-col gap-2">
+                    {product.discount && (
 
-        </div>
+                    )}
     );
 };
 
