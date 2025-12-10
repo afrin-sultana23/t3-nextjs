@@ -269,7 +269,9 @@ const Page = () => {
                 {/* Badges */}
                 <div className="absolute top-2 left-2 z-10 flex flex-col gap-2">
                     {product.discount && (
-
+                        <Badge className="bg-red-500 hover:bg-red-600">
+                            -{product.discount}%
+                        </Badge>
                     )}
     );
 };
