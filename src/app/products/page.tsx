@@ -284,6 +284,12 @@ const Page = () => {
                     onClick={() => toggleWishlist(product.id)}
                     className="absolute top-2 right-2 z-10 bg-white rounded-full p-2 shadow-md transition-all hover:scale-110"
                 >
+                    <Heart
+                        className={`h-5 w-5 ${
+                            isWishlisted ? "fill-red-500 text-red-500" : "text-gray-600"
+                        }`}
+                    />
+                </button>
     );
 };
 
