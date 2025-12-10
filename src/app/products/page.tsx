@@ -260,6 +260,10 @@ const Page = () => {
         </div>
     )
 
+    // Product Card - Grid View
+    const ProductCardGrid = ({ product }: { product: Product }) => {
+        const isWishlisted = wishlistedItems.includes(product.id)
+
         return (
         <div>
             <h1>all products page</h1>
