@@ -297,6 +297,11 @@ const Page = () => {
                         <Image
                             src={product.image}
                             alt={product.name}
+                            fill
+                            className="object-cover transition-transform group-hover:scale-110"
+                        />
+                    </div>
+                </Link>
     );
 };
 
