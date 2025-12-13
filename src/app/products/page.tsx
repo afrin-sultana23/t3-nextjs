@@ -302,6 +302,11 @@ const Page = () => {
                         />
                     </div>
                 </Link>
+
+                <CardContent className="p-4">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
+                        {product.category}
+                    </p>
     );
 };
 
