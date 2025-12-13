@@ -307,6 +307,9 @@ const Page = () => {
                     <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                         {product.category}
                     </p>
+                    <Link href={`/product/${product.id}`}>
+
+                    </Link>
     );
 };
 
