@@ -316,6 +316,9 @@ const Page = () => {
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                         {product.description}
                     </p>
+
+                    <div className="flex items-center gap-2 mb-3">
+                        <div className="flex items-center">
     );
 };
 
