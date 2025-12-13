@@ -294,7 +294,9 @@ const Page = () => {
                 {/* Product Image */}
                 <Link href={`/product/${product.id}`}>
                     <div className="relative aspect-square overflow-hidden bg-gray-100">
-
+                        <Image
+                            src={product.image}
+                            alt={product.name}
     );
 };
 
