@@ -327,6 +327,9 @@ const Page = () => {
                                             ? "fill-yellow-400 text-yellow-400"
                                             : "text-gray-300"
                                     }`}
+                                />
+                            ))}
+                        </div>
     );
 };
 
