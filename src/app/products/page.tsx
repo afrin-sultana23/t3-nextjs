@@ -330,6 +330,10 @@ const Page = () => {
                                 />
                             ))}
                         </div>
+                        <span className="text-xs text-muted-foreground">
+                            ({product.reviewCount})
+                        </span>
+                    </div>
     );
 };
 
