@@ -336,7 +336,8 @@ const Page = () => {
                     </div>
 
                     <div className="flex items-center gap-2 mb-4">
-
+                         <span className="text-2xl font-bold text-primary">
+                            ${product.price.toFixed(2)}
                      </span>
     );
 };
