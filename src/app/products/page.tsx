@@ -334,6 +334,10 @@ const Page = () => {
                             ({product.reviewCount})
                         </span>
                     </div>
+
+                    <div className="flex items-center gap-2 mb-4">
+
+                     </span>
     );
 };
 
