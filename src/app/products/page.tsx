@@ -342,7 +342,10 @@ const Page = () => {
                         {product.originalPrice && (
                             <span className="text-sm text-muted-foreground line-through">
                                 ${product.originalPrice.toFixed(2)}
-              </span>
+                            </span>
+                        )}
+                    </div>
+                </CardContent>
     );
 };
 
