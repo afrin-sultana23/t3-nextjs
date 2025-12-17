@@ -349,7 +349,8 @@ const Page = () => {
 
                 <CardFooter className="p-4 pt-0">
                     <Button
-
+                        onClick={() => handleAddToCart(product)}
+                        disabled={!product.inStock}
                         className="w-full gap-2"
                     >
     );
