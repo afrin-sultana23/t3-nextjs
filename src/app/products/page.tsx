@@ -356,6 +356,10 @@ const Page = () => {
                         <ShoppingCart className="h-4 w-4" />
                         {product.inStock ? "Add to Cart" : "Out of Stock"}
                     </Button>
+                </CardFooter>
+            </Card>
+        )
+    }
     );
 };
 
