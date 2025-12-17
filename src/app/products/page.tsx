@@ -346,6 +346,12 @@ const Page = () => {
                         )}
                     </div>
                 </CardContent>
+
+                <CardFooter className="p-4 pt-0">
+                    <Button
+
+                        className="w-full gap-2"
+                    >
     );
 };
 
