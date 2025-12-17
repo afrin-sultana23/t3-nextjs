@@ -354,7 +354,7 @@ const Page = () => {
                         className="w-full gap-2"
                     >
                         <ShoppingCart className="h-4 w-4" />
-
+                        {product.inStock ? "Add to Cart" : "Out of Stock"}
                     </Button>
     );
 };
