@@ -363,7 +363,7 @@ const Page = () => {
 
     // Product Card - List View
     const ProductCardList = ({ product }: { product: Product }) => {
-
+        const isWishlisted = wishlistedItems.includes(product.id)
 
     );
 };
