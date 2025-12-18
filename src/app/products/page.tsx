@@ -365,7 +365,12 @@ const Page = () => {
     const ProductCardList = ({ product }: { product: Product }) => {
         const isWishlisted = wishlistedItems.includes(product.id)
 
-    );
+        return (
+            <Card className="overflow-hidden transition-all hover:shadow-lg">
+                <div className="flex flex-col md:flex-row">
+
+
+                    );
 };
 
 export default Page;
