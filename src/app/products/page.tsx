@@ -368,7 +368,7 @@ const Page = () => {
         return (
             <Card className="overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
-
+                    <div className="relative w-full md:w-64 h-64 md:h-auto bg-gray-100">
 
                     );
 };
