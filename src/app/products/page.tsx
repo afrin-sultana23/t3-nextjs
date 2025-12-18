@@ -360,6 +360,11 @@ const Page = () => {
             </Card>
         )
     }
+
+    // Product Card - List View
+    const ProductCardList = ({ product }: { product: Product }) => {
+
+
     );
 };
 
