@@ -374,6 +374,10 @@ const Page = () => {
                                 -{product.discount}%
                             </Badge>
                         )}
+                        {!product.inStock && (
+                            <Badge variant="secondary" className="bg-gray-500">
+                                Out of Stock
+                            </Badge>
 
                     );
 };
