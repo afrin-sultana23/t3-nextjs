@@ -369,6 +369,11 @@ const Page = () => {
             <Card className="overflow-hidden transition-all hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                     <div className="relative w-full md:w-64 h-64 md:h-auto bg-gray-100">
+                        {product.discount && (
+                            <Badge className="bg-red-500 hover:bg-red-600">
+                                -{product.discount}%
+                            </Badge>
+                        )}
 
                     );
 };
