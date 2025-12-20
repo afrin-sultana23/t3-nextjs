@@ -388,6 +388,11 @@ const Page = () => {
                     >
                         <Heart
                             className={`h-5 w-5 ${
+                                isWishlisted ? "fill-red-500 text-red-500" : "text-gray-600"
+                            }`}
+                        />
+                    </button>
+                }
 
                     );
 };
