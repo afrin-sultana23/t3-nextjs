@@ -384,6 +384,10 @@ const Page = () => {
                     {/* Wishlist Button */}
                     <button
                         onClick={() => toggleWishlist(product.id)}
+                        className="absolute top-2 right-2 z-10 bg-white rounded-full p-2 shadow-md transition-all hover:scale-110"
+                    >
+                        <Heart
+                            className={`h-5 w-5 ${
 
                     );
 };
