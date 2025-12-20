@@ -378,6 +378,8 @@ const Page = () => {
                             <Badge variant="secondary" className="bg-gray-500">
                                 Out of Stock
                             </Badge>
+                        )}
+                    </div>
 
                     );
 };
