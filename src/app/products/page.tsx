@@ -381,6 +381,10 @@ const Page = () => {
                         )}
                     </div>
 
+                    {/* Wishlist Button */}
+                    <button
+                        onClick={() => toggleWishlist(product.id)}
+
                     );
 };
 
