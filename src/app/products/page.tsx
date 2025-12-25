@@ -392,6 +392,17 @@ const Page = () => {
                             }`}
                         />
                     </button>
+                    {/* Product Image */}
+                    <Link href={`/product/${product.id}`}>
+                        <div className="relative aspect-square overflow-hidden bg-gray-100">
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                fill
+                                className="object-cover transition-transform group-hover:scale-110"
+                            />
+                        </div>
+                    </Link>
                 }
 
                     );
