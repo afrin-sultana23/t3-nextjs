@@ -407,6 +407,11 @@ const Page = () => {
                         <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
                             {product.category}
                         </p>
+                        <Link href={`/product/${product.id}`}>
+                            <h3 className="font-semibold text-lg mb-2 line-clamp-2 hover:text-primary transition-colors">
+                                {product.name}
+                            </h3>
+                        </Link>
                 }
 
                     );
