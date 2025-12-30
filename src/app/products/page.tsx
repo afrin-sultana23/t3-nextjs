@@ -440,6 +440,9 @@ const Page = () => {
                                     <span className="text-sm text-muted-foreground line-through">
                 ${product.originalPrice.toFixed(2)}
               </span>
+                                )}
+                            </div>
+                    </CardContent>
                 }
 
                     );
