@@ -416,6 +416,18 @@ const Page = () => {
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                             {product.description}
                         </p>
+                        <div className="flex items-center gap-2 mb-3">
+                            <div className="flex items-center">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star
+                                        key={i}
+                                        className={`h-4 w-4 ${
+                                            i < Math.floor(product.rating)
+                                                ? "fill-yellow-400 text-yellow-400"
+                                                : "text-gray-300"
+                                        }`}
+                                    />
+                                ))}
                 }
 
                     );
